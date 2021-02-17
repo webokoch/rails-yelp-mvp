@@ -1,8 +1,11 @@
 
-<div class="container p-5">
-  <h1> <%= @restaurant.name %> </h1>
 
-  <h2> <%= @restaurant.address %> </h2>
-  <h2> <%= @restaurant.phone_number %> </h2>
-  <h2> <%= @restaurant.category.capitalize %> </h2>
-</div>
+  <h1> <%= @restaurant.name %> </h1>
+  <p class="mb-0">Where to find <%= @restaurant.name %> </p>
+  <h3> <%= @restaurant.address %> </h3>
+  <p class="mb-0">For reservations call</p>
+  <h3> <%= @restaurant.phone_number %> </h3>
+  <p class="mb-0">Served food is</p>
+  <h3> <%= @restaurant.category.capitalize %> </h3>
+<!--  <h3><%=  @restaurant.reviews%></h3> -->
+  <%= link_to "Back to all Restaurants", restaurants_path, class: "btn btn-primary rounded"%>
