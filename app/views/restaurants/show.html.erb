@@ -25,12 +25,16 @@
     <%= pluralize(@restaurant.reviews.count, "Review") %>
   </p>
   <ul class="list-unstyled ml-3">  <% @restaurant.reviews.each do |review| %>
-    <li>
-      <%= pluralize(review.rating, "Star") %>
-      <% review.rating.to_i.times do  %>
-      ⭐️
-      <% end %>
-      | <%= review.content %>
+    <li class="d-flex align-items-center justify-content-start">
+      <div class="rating">
+        <%= pluralize(review.rating, "Star") %>
+      </div>
+      <div class="stars">
+        <% review.rating.to_i.times do  %>
+        ⭐️
+        <% end %>
+      </div>
+      <%= review.content %>
     </li>
     <% end %>
   </ul>
