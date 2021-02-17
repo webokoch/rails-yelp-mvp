@@ -1,10 +1,14 @@
 
-  <h1>Restaurant Guide Berlin</h1>
+  <h1>
+    Restaurant Guide Berlin
+  </h1>
 
   <ul class="list-unstyled">
-   <% @restaurants.each do |restaurant| %>
-   <li> <%= link_to restaurant.name, restaurant_path(restaurant), class: "text-decoration-none"%>  </li>
-   <% end %>
+    <% @restaurants.each do |restaurant| %>
+    <li>
+      <%= link_to restaurant.name, restaurant_path(restaurant), class: "restaurant"%>
+    </li>
+    <% end %>
   </ul>
 
   <%= link_to "Add a new Restaurant", new_restaurant_path, class: "btn btn-primary rounded"%>
